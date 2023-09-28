@@ -1,0 +1,22 @@
+// breakpoints for mobile, tablets and large screen
+// 700px- medium,900px-Large, 1440px- xlarge
+
+$breakpoints-up: (
+    "medium": 43.75em,
+    "large": 56.25em,
+    "xlarge": 90em,
+    );
+
+    @mixin breakpoint($size) {
+        @media(min-width: map-get($breakpoints-up, $size)) {
+            @content;
+        }
+    }
+
+.container {
+    @include breakpoint (medium) {
+        body {
+            background-color: black;
+        }
+    }
+}

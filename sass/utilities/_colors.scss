@@ -1,0 +1,62 @@
+// Primary Colors
+$base-color: hsl(0, 0%, 100%);
+$pale-blue:hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$pale-purple: hsl(237, 60%, 65%);
+
+// Neutral colors
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+main {
+    background-color: $base-color;
+}
+
+article {
+    background-color: $base-color;
+    h1 {
+        color:$dark-blue;
+    }
+    p {
+        color: $desaturated-blue;
+    }
+}
+
+section {
+    background-color: $very-pale-blue;
+    span{
+        color: $dark-blue;
+        span{
+            color: $desaturated-blue;
+        }
+    }
+    a {
+        color: $bright-blue;
+        &:hover {
+            text-decoration: none;
+            color: $pale-purple;
+        }
+    }
+
+}
+
+.action {
+    button{
+    background-color: $bright-blue;
+    color: $base-color;
+    box-shadow: 0px 15px 15px 0px $pale-blue;
+    }
+    button {
+        &:hover {
+            background-color: $pale-purple;
+        }
+    }
+    a {
+        color: $desaturated-blue;
+        &:hover {
+            color: $dark-blue;
+        }
+    }
+}
+
